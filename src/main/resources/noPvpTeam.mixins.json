@@ -4,6 +4,7 @@
   "package": "net.lucilletea.noPvpTeam.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
+    "MixinBucketItem",
     "MixinPlayerEntity"
   ],
   "client": [
