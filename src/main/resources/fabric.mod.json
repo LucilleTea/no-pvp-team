@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "modid",
+  "version": "${version}",
+
+  "name": "No PvP Team",
+  "description": "Allows a team rule that disables PvP entirely for that team",
+  "authors": [
+    "LucilleTea"
+  ],
+  "contact": {
+    "homepage": "https://fabricmc.net/",
+    "sources": "https://github.com/FabricMC/fabric-example-mod"
+  },
+
+  "license": "LGPLv3",
+  "icon": "assets/modid/icon.png",
+
+  "environment": "*",
+  "mixins": [
+    "noPvpTeam.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.7.4",
+    "minecraft": "1.16.x"
+  }
+}
