@@ -16,13 +16,16 @@ public abstract class MixinPlayerEntity extends Entity {
 
     /**
      * @author LucilleTea
+     * @reason The original method is devoted to the friendlyFire functionality.
+     * Here we replace it with functionality to prevent PvP if either player has
+     * the option enabled on their team.
      */
     @Overwrite
     public boolean shouldDamagePlayer(PlayerEntity player) {
         AbstractTeam abstractTeam = this.getScoreboardTeam();
         AbstractTeam abstractTeam2 = player.getScoreboardTeam();
         if (player.equals(this)) {
-            return true;
+            return true; // a player should always be able to damage themself, even if pvp is disabled.
         }
         if (abstractTeam == null) {
             if (abstractTeam2 == null) {
